@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Страница целиком → PDF",
+  "version": "1.1.0",
+  "description": "Локальный PDF-снимок длинных страниц и широких досок. Без отправки данных на сервер.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "debugger",
+    "downloads"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Сохранить всю страницу в PDF"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      }
+    }
+  }
+}

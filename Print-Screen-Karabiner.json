@@ -1,0 +1,12 @@
+{
+  "title": "PDF всей страницы Chrome",
+  "rules": [{
+    "description": "Print Screen → сохранить всю страницу Chrome в PDF",
+    "manipulators": [{
+      "type": "basic",
+      "from": {"key_code": "print_screen", "modifiers": {"optional": ["caps_lock"]}},
+      "to": [{"key_code": "y", "modifiers": ["left_command", "left_shift"]}],
+      "conditions": [{"type": "frontmost_application_if", "bundle_identifiers": ["^com\\.google\\.Chrome$"]}]
+    }]
+  }]
+}
